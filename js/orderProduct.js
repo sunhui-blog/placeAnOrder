@@ -103,6 +103,9 @@ $(function () {
         if(totalNum > 0){
             $(".order-btn").css("background-color",'#f14344');
             $(".order-btn").attr("disabled",false);
+        }else{
+            $(".order-btn").css("background-color",'#6f6f6f');
+            $(".order-btn").attr("disabled",true);
         }
     }
 
