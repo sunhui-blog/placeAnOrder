@@ -37,7 +37,7 @@ $(function () {
         });
     }
 
-    //立即购买 placeholder
+    //立即购买
     $(".buy-now span").click(function(){
         $(".modal").show();
     });
