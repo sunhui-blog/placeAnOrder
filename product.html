@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="https://github.com/sunny-5/placeAnOrder.git" />
+    <meta name="viewport" content="width=device-width initial-scale=1.0 maximum-scale=1.0 user-scalable=yes" />
+    <title>Title</title>
+    <link href="css/product.css" rel="stylesheet" type="text/css"/>
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/orderProduct.js"></script>
+</head>
+<body>
+<div id="page">
+    <div class="content">
+        <div>
+            <img class="product-image"/>
+            <div class="product-single">
+                <div class="product-info">
+                    <span data-attribute="title"></span>
+                    <span class="current-price" data-attribute="price"></span>
+                    <div class="number-brand">货号：<span data-attribute="number"></span> | 品牌：<span data-attribute="brand"></span></span></div>
+                </div>
+                <div class="products-details">
+                    <div class="product-title">商品信息</div>
+                    <div>颜色：<span data-attribute="colorSort"></span></div>
+                    <div>尺码：<span data-attribute="size"></span></div>
+                </div>
+            </div>
+            <div class="buy-now">
+                  <span>立即购买</span>
+            </div>
+        </div>
+    </div>
+    <div class="modal">
+        <div class="product-list">
+            <div class="product-box">
+                <h4 class="modal-title">立即下单</h4>
+                <span class="single-price">单价：<span class="price" data-attribute="price"></span>元/件</span>
+                <table class="choose-product">
+                    <thead>
+                        <tr>
+                            <th class="col">尺码</th>
+                            <th class="col">S</th>
+                            <th class="col">M</th>
+                            <th class="col">L</th>
+                            <th class="col">小计</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr data-attribute="gray">
+                            <td>灰色</td>
+                            <td><input data-attribute="S" type="text"/></td>
+                            <td><input data-attribute="M" type="text"/></td>
+                            <td><input data-attribute="L" type="text"/></td>
+                            <td data-attribute="total">0</td>
+                        </tr>
+                        <tr data-attribute="red">
+                            <td>红色</td>
+                            <td><input data-attribute="S" type="text"/></td>
+                            <td><input data-attribute="M" type="text"/></td>
+                            <td><input data-attribute="L" type="text"/></td>
+                            <td data-attribute="total">0</td>
+                        </tr>
+                        <tr data-attribute="blue">
+                            <td>蓝色</td>
+                            <td><input data-attribute="S" type="text"/></td>
+                            <td><input data-attribute="M" type="text"/></td>
+                            <td><input data-attribute="L" type="text"/></td>
+                            <td data-attribute="total">0</td>
+                        </tr>
+                        <tr data-attribute="yellow">
+                            <td>黄色</td>
+                            <td><input data-attribute="S" type="text"/></td>
+                            <td><input data-attribute="M" type="text"/></td>
+                            <td><input data-attribute="L" type="text"/></td>
+                            <td data-attribute="total">0</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="order-now buy-now">
+                    <span class="sum-number">合计：<span class="sum-num"></span>件</span>
+                    <span>总价：<span class="sum-price"></span></span>
+                    <button class="order-btn" disabled="disabled">立即下单</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

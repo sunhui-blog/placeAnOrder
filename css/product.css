@@ -1,0 +1,35 @@
+/*重置*/
+html {color:#000;background:#fff;overflow-y:scroll;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;}
+html *{outline:0;-webkit-text-size-adjust:none;-webkit-tap-highlight-color:rgba(0,0,0,0);}
+html,body {font-family:sans-serif;}
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,code,form,fieldset,legend,input,textarea,p,th,td,hr,button,article {margin:0;padding:0;}
+input,select,textarea {font-size:100%}
+table {border-collapse:collapse;border-spacing:0;}
+img {border:0;}
+ol,ul {list-style:none;}
+/*product-single*/
+.product-image{width: 100%; left: 0;}
+.product-info{text-align: center;}
+.product-info span{display: block;}
+.products-details{padding: 1.5rem 1rem;}
+.number-brand span{display: inline-block;}
+.product-title{margin-bottom:1rem;text-align: center;font-weight: bolder;}
+.current-price{color: red;padding: 0.1rem;font-size: 6vw;}
+.current-price:before{content:"\FFE5";}
+.buy-now{position: fixed;background-color: #f14344;width: 100%;height: 2.8rem;bottom: 0;
+    z-index: 1;color: #fff;text-align: right;vertical-align: middle;line-height:2.8rem;}
+.buy-now span{padding-right: 1.5rem;}
+.content{position: relative;}
+/*弹层*/
+.modal{position: absolute;top:0;background-color:rgba(0,0,0,.5);width: 100%;height: 100%;z-index: 2;}
+.modal-title{font-size: 4vw;font-weight: normal;padding: 0.8rem 0.5rem;}
+.single-price{float: right;font-size: 4vw;color: red;}
+.product-list{position: relative;height: 100%;}
+.product-box{position: absolute;bottom: 0;width: 100%;height: 20rem;background-color: #fff;}
+.choose-product{width: 100%;margin: 0 0.1rem;vertical-align:bottom;font-size: 4vw;}
+.choose-product thead th,.choose-product tbody td{text-align: center;padding: 0.2rem;}
+.choose-product tbody td input{width: 80%;border: none;border-bottom: 1px solid #6f6f6f;text-align: center;}
+.col{width: 20%}
+.order-now{background-color: #fff;color: #2a2a2a;font-size: 4vw;}
+.order-btn{display: inline-block;height: 100%;width: 6rem;text-align: center;background-color: #6f6f6f;color: #fff;}
+.sum-number{float: left;padding-left: 0.4rem;}
