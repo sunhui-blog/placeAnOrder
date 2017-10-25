@@ -63,28 +63,41 @@ $(function () {
         }
     }
 
+    //校验：1、不能输入除数字外其他字符；2、判断是否超出库存
     $("table tbody tr td input").keyup(function () {
-        var value=$(this).val().replace(/[^\d]/g,'')
+        var value=$(this).val().replace(/[^\d]/g,'');
         $(this).val(value);
+        checkIsLargeTotal(this);
     });
 
     //表格单元中input绑定事件
     $("table tbody tr td input").mouseout(function () {
-        var currentNum=Number($(this).val());
-        var totalNum=Number($(this).attr('placeholder'));
-        var currentTr=$(this).parent("td").parent("tr").attr("data-attribute");
-        var currentTd=$(this).attr("data-attribute");
-        if(currentNum <= totalNum){
-            setTdTotalNum(currentTr);
+        var checkInput=checkIsLargeTotal(this);
+        if(checkInput == false){
+            return;
         }else{
+            setTdTotalNum(checkInput);
+        }
+    });
+
+    //判断是否超出库存
+    function checkIsLargeTotal(obj) {
+        var currentNum=Number($(obj).val());
+        var totalNum=Number($(obj).attr('placeholder'));
+        var currentTr=$(obj).parent("td").parent("tr").attr("data-attribute");
+        var currentTd=$(obj).attr("data-attribute");
+        if(currentNum > totalNum){
             alert("库存不足，超出库存");
-            $(this).val("");
+            $(obj).val("");
             //重新获取焦点
             setTimeout(function() {
                 $("table tbody tr[data-attribute="+currentTr+"] td input[data-attribute="+currentTd+"]").focus();
             }, 0);
+            return false;
+        }else{
+            return currentTr;
         }
-    });
+    }
 
     //计算每行总数、总共件数、总价
     function setTdTotalNum(trName) {
